@@ -5,11 +5,13 @@ verify_ssl = true
 
 [dev-packages]
 pylint = "*"
+pylint-django = "*"
 
 [packages]
 django = "*"
 djangorestframework = "*"
 django-cors-headers = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.8"
