@@ -1,10 +1,4 @@
-FROM node:14.15.2-buster
-
-RUN apt update
-
-RUN apt -y upgrade
-
-RUN apt install -y python3-pip
+FROM nikolaik/python-nodejs:python3.8-nodejs14
 
 COPY . /app
 
@@ -16,7 +10,7 @@ RUN npm run build
 
 WORKDIR /app/backend
 
-RUN pip3 install pipenv
+RUN pip install pipenv
 
 RUN pipenv install
 
