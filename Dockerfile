@@ -2,7 +2,7 @@ FROM node:14.15.2-slim
 
 RUN apt-get update && apt-get upgrade -y
 
-RUN apt-get install python -y
+RUN apt-get install python3.8 -y
 
 COPY . /app
 
