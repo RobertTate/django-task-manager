@@ -1,7 +1,7 @@
 build:
   docker:
-    web: frontend/Dockerfile
-    api: backend/Dockerfile
+    clientBuild: frontend/Dockerfile
+    web: backend/Dockerfile
 run:
-  web: npm run start
-  api: pipenv run python manage.py runserver 0.0.0.0:8000
+  clientBuild: npm run start
+  web: pipenv run python manage.py runserver 0.0.0.0:8000
