@@ -1,14 +1,10 @@
-FROM node:14.15.2-slim
+FROM node:14.15.2-buster
 
-RUN apt-get update && apt-get upgrade -y
+RUN apt update
 
-RUN apt-get install software-properties-common -y 
+RUN apt -y upgrade
 
-RUN add-apt-repository ppa:deadsnakes/ppa -y
-
-RUN apt-get update
-
-RUN apt-get install python3.8 -y
+RUN apt install -y python3-pip
 
 COPY . /app
 
@@ -20,7 +16,7 @@ RUN npm run build
 
 WORKDIR /app/backend
 
-RUN pip install pipenv
+RUN pip3 install pipenv
 
 RUN pipenv install
 
