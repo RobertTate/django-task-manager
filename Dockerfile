@@ -1,6 +1,6 @@
 FROM node:14.15.2
 
-RUN apt-get update || : && apt-get install python3.8.2
+RUN apt-get update || : && apt-get install python3.8
 
 COPY . /app
 
