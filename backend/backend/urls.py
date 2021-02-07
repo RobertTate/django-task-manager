@@ -10,4 +10,5 @@ router.register(r'tickets', views.TicketView, 'tickets')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path("", views.index, name="index")
 ]
