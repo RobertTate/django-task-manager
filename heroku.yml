@@ -2,4 +2,4 @@ build:
   docker:
     web: Dockerfile
 run:
-  web: pipenv run python manage.py runserver 0.0.0.0:8000
+  web: pipenv run python backend/manage.py runserver 0.0.0.0:8000
