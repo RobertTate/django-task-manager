@@ -1,7 +1,5 @@
 build:
   docker:
-    build: frontend/Dockerfile
-    web: backend/Dockerfile
+    web: Dockerfile
 run:
-  build: npm run start
   web: pipenv run python manage.py runserver 0.0.0.0:8000
